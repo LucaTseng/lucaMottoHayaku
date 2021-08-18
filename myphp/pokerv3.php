@@ -6,7 +6,8 @@ shuffle($poker); //shuffle 洗牌 官網是這樣寫的 基本上一定要先建
 
 $players = [[], [], [], []]; //現在有四個玩家 四個陣列
 foreach ($poker as $i => $card) { //將前面的陣列中的內容 一個一個列出來 (i是序號,值是數字)
-    $players[$i % 4][(int)($i / 4)] = $card;
+    $players[$i % 4][(int)($i / 4)] = $card; // 玩家陣列 裡面 放著數字
+    //前面的中括號 是指序號n玩家的陣列 這邊要先畫樹狀圖 不然你根本看不懂
 }
 ?>
 <table border="1" width="100%">
