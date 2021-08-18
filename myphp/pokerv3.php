@@ -1,9 +1,10 @@
 <?php
+//時間 7/30 上午11點左右
 $poker = range(0, 51); // range這個函數可以產生一個陣列並包含一個範圍內的元素
 shuffle($poker); //shuffle 洗牌 官網是這樣寫的 基本上一定要先建立一個陣列
 //https://www.php.net/manual/en/function.shuffle.php
 
-$players = [[], [], [], []]; //撲克牌有四個種類：黑桃、方塊、紅心、梅花
+$players = [[], [], [], []]; //現在有四個玩家 四個陣列
 foreach ($poker as $i => $card) { //將前面的陣列中的內容 一個一個列出來 (i是序號,值是數字)
     $players[$i % 4][(int)($i / 4)] = $card;
 }
