@@ -1,7 +1,7 @@
 <?php
 $id = 'A123456789';
 $regex = '/^[A-Z][12][0-9]{8}$/';
-if (preg_match($regex, $id)) { //preg_match用來檢測有沒有符合
+if (preg_match($regex, $id)) { //preg_match用來檢測有沒有符合(規定,對象)
     echo 'OK';
 } else {
     echo 'XX';
