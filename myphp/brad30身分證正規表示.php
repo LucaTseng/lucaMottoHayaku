@@ -11,5 +11,3 @@
     // 3. 049-1234567
     // 4. email
     // 5. password => number, letters, 特殊符號, 8
-
-?>
