@@ -18,3 +18,6 @@ if (preg_match($regex, $id)) { //preg_match用來檢測有沒有符合
     //  str.match(/ain/gi)   // Returns ain,AIN,ain,ain
     // 上面的gi g是golbal的意思 不要只找到一個就算了 還有其他的也一併找出來 g沒加的話找到就停下了
     // 上面的i 是不分大小寫 
+    // javascript正規表示法就是一個物件 不是用字串去看待他
+    //PHP是用字串 所以上面第三行用的是兩個分號
+    // 老師說在前端比對用戶資料 之後才去比對後端伺服器 所以前端的js正規表示法很重要
