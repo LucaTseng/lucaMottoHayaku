@@ -3,8 +3,8 @@ function checkTWId($id)
 {
     if (preg_match('/^[A-Z][12][0-9]{8}$/', $id)) {
         $letters = 'ABCDEFGHJKLMNPQRSTUVXYWZIO'; //按照順序
-        $c1 = substr($id, 0, 1);
-        $n12 = strpos($letters, $c1) + 10;
+        $c1 = substr($id, 0, 1); //拿出序號0-1之間的位置
+        $n12 = strpos($letters, $c1) + 10; //算出該英文字在字串當中的第幾個序號之後再＋10
         $n1 = (int)($n12 / 10);
         $n2 = $n12 % 10;
         $n3 = substr($id, 1, 1);
