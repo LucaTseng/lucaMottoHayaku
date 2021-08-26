@@ -7,6 +7,7 @@ if (checkTWId('A123456789')) {
 } else {
     echo 'XX';
 }
+
 echo '<hr />';
 echo "1. " . createTWIdByRandom() . '<br />';
 echo "2. " . createTWIdByGender(true) . '<br />';
