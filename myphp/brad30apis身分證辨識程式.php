@@ -23,8 +23,8 @@ function checkTWId($id)
     return false;
 }
 //假設 ＄id吻合 前述正規表示，ture的話 執行台灣規定的有效驗證，flase的話 回覆flase結束
-function createTWIdByRandom()
-{
+function createTWIdByRandom() //下面的公式 身分證產生器 順序是這樣的
+{ //第26行呼叫31行，31行呼叫42行。第37行呼叫42行。最終都要執行第42行
     $gender = rand(0, 1) == 0;
     return createTWIdByGender($gender);
 }
@@ -32,7 +32,7 @@ function createTWIdByGender($gender = false)
 {
     $letters = 'ABCDEFGHJKLMNPQRSTUVXYWZIO';
     $area = substr($letters, rand(0, 25), 1);
-    return createTWIdByBoth($gender, $area);
+    return createTWIdByBoth($gender, $area); //因為性別在第31行已經預設了，所以這邊33'34行要設定地區
 }
 function createTWIdByArea($area = 'B')
 {

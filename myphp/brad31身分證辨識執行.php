@@ -1,6 +1,6 @@
 <?php
 include "bradapis.php"; //沒寫 php會不認識 寫了等於導入整段程式碼
-include "apis/myapis.php";
+include "apis/myapis.php"; //這句話 表示即便在不同的資料夾 我們仍然可以使用對的路徑進行設定
 
 if (checkTWId('A123456789')) {
     echo 'OK';
@@ -9,6 +9,7 @@ if (checkTWId('A123456789')) {
 }
 
 echo '<hr />';
+//下面是執行 隨機產生身分證的程式
 echo "1. " . createTWIdByRandom() . '<br />';
 echo "2. " . createTWIdByGender(true) . '<br />';
 echo "3. " . createTWIdByArea('Y') . '<br />';
