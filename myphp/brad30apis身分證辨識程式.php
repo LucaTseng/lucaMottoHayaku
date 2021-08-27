@@ -23,7 +23,7 @@ function checkTWId($id)
     return false;
 }
 //假設 ＄id吻合 前述正規表示，ture的話 執行台灣規定的有效驗證，flase的話 回覆flase結束
-function createTWIdByRandom() //下面的公式 身分證產生器 順序是這樣的
+function createTWIdByRandom() //下面的公式 『身分證產生器』 順序是這樣的
 { //第26行呼叫31行，31行呼叫42行。第37行呼叫42行。最終都要執行第42行
     $gender = rand(0, 1) == 0;
     return createTWIdByGender($gender);
