@@ -43,7 +43,7 @@ chroot — 改變根目錄
 closedir — 關閉資料夾（目錄句柄）
 dir — 返回一个 Directory 舉實例
 getcwd — 取得當前工作目錄
-opendir — 打開資料夾（目錄句柄） 有成功傳目的地 沒有成功會傳flase
+opendir — 打開資料夾（目錄句柄） 有成功傳目的地 沒有成功會傳flase，不會打開子目錄
 readdir — 从資料夾（目錄句柄）中讀取条目
 rewinddir — 倒回資料夾（目录句柄）
 scandir — 列出指定路径中的文件和目錄
