@@ -10,7 +10,7 @@ date_default_timezone_set('Asia/Taipei');
 </tr>
 <?php
 $dir = '.';
-$fp = @opendir($dir) or exit('Server Busy v2');
+$fp = @opendir($dir) or exit('Server Busy v2'); //或者也可以寫 or die();
 if ($fp) {
     while ($row = readdir($fp)) {
         $mtime = date('Y-m-d H:i:s', filemtime("{$dir}/{$row}"));
@@ -48,3 +48,4 @@ readdir — 从資料夾（目錄句柄）中讀取条目
 rewinddir — 倒回資料夾（目录句柄）
 scandir — 列出指定路径中的文件和目錄
 <!-- 任何一個function 只要前面加了一個小老鼠 系統就會把錯誤訊息給抑制 -->
+原則上在開發階段 是不會抑制的 所以正常情況下 是用不到的
